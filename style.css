@@ -1,0 +1,43 @@
+
+body{
+    font-family: Arial, sans-serif;
+    background:#f4f4f4;
+    padding:40px;
+}
+
+h1{
+    text-align:center;
+}
+
+.qa-item{
+    background:white;
+    margin:10px 0;
+    padding:15px;
+    border-radius:6px;
+    box-shadow:0 2px 5px rgba(0,0,0,0.1);
+}
+
+.question{
+    font-weight:bold;
+    cursor:pointer;
+    position:relative;
+}
+
+.question::after{
+    content:"+";
+    position:absolute;
+    right:0;
+}
+
+.qa-item.active .question::after{
+    content:"-";
+}
+
+.answer{
+    display:none;
+    margin-top:10px;
+}
+
+.qa-item.active .answer{
+    display:block;
+}

@@ -1,43 +1,50 @@
-
+/*  overall page design */
 body{
-    font-family: Arial, sans-serif;
-    background:#f4f4f4;
-    padding:40px;
+    font-family: Arial, sans-serif; /* Font style for entire page */
+    background:#f4f4f4; /* Light grey background */
+    padding:40px; /* Space around content */
 }
 
+/* Main heading styling */
 h1{
-    text-align:center;
+    text-align:center; /* Center align heading */
 }
 
+/* Each Q&A item box */
 .qa-item{
-    background:white;
-    margin:10px 0;
-    padding:15px;
-    border-radius:6px;
-    box-shadow:0 2px 5px rgba(0,0,0,0.1);
+    background:white; /* White background for card */
+    margin:10px 0; /* Space between each item */
+    padding:15px; /* Inner spacing */
+    border-radius:6px; /* Rounded corners */
+    box-shadow:0 2px 5px rgba(0,0,0,0.1); /* Soft shadow effect */
 }
 
+/* Question styling */
 .question{
-    font-weight:bold;
-    cursor:pointer;
-    position:relative;
+    font-weight:bold; /* Make question bold */
+    cursor:pointer; /* Pointer cursor on hover */
+    position:relative; /* Required for positioning + symbol */
 }
 
+/* "+" symbol after question (collapsed state) */
 .question::after{
-    content:"+";
-    position:absolute;
-    right:0;
+    content:"+"; /* Default symbol */
+    position:absolute; /* Position relative to question */
+    right:0; /* Place at right side */
 }
 
+/* Change "+" to "-" when active (expanded state) */
 .qa-item.active .question::after{
-    content:"-";
+    content:"-"; /* Symbol changes on click */
 }
 
+/* Answer section (hidden by default) */
 .answer{
-    display:none;
-    margin-top:10px;
+    display:none; /* Hide answer initially */
+    margin-top:10px; /* Space above answer */
 }
 
+/* Show answer when parent has active class */
 .qa-item.active .answer{
-    display:block;
+    display:block; /* Display answer when active */
 }

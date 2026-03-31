@@ -1,142 +1,322 @@
+<!DOCTYPE html> <!-- Defines HTML5 document -->
 
-<html>
+<html lang="en"> <!-- Language set for accessibility & SEO -->
+
 <head>
-<title>My portfolio</title>
-<link href="style.css" rel="stylesheet">
+    <!-- Character encoding (important for proper text display) -->
+    <meta charset="UTF-8">
+
+    <!-- Responsive design for mobile devices -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Page description (SEO purpose) -->
+    <meta name="description" content="Portfolio of Vinita Prasad, a BCA student passionate about web development and learning new technologies.">
+
+    <!-- Keywords for search engines -->
+    <meta name="keywords" content="Vinita Prasad, Portfolio, BCA Student, Web Developer, HTML, CSS, JavaScript">
+
+    <!-- Author of the page -->
+    <meta name="author" content="Vinita Prasad">
+
+    <!-- Title shown in browser tab -->
+    <title>Vinita Prasad | Portfolio</title>
+
+    <!-- External CSS file linking -->
+    <link href="style.css" rel="stylesheet">
+
+    <!-- ================= INTERNAL CSS (Responsive Design) ================= -->
+    <style>
+
+        body {
+            font-family: Arial;
+            margin: 0;
+            padding: 0;
+            background: #f4f4f4;
+        }
+
+        header {
+            background: #333;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        nav {
+            background: #555;
+            text-align: center;
+            padding: 10px;
+        }
+
+        nav a {
+            color: white;
+            margin: 10px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        section {
+            padding: 20px;
+            margin: 10px;
+            background: white;
+            border-radius: 10px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 15px;
+            background: #333;
+            color: white;
+        }
+
+        input, textarea {
+            width: 90%;
+            padding: 8px;
+            margin: 5px 0;
+        }
+
+        button {
+            padding: 8px 15px;
+            background: #333;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        li {
+            margin-bottom: 10px;
+        }
+
+        li p {
+            margin: 5px 0 0 0;
+            font-size: 14px;
+            color: #555;
+        }
+
+        /* ================= RESPONSIVENESS ================= */
+
+        /* Tablet */
+        @media (max-width: 768px) {
+            nav a {
+                display: block;
+                margin: 5px 0;
+            }
+
+            section {
+                margin: 5px;
+                padding: 15px;
+            }
+        }
+
+        /* Mobile */
+        @media (max-width: 480px) {
+            header h1 {
+                font-size: 20px;
+            }
+
+            nav {
+                padding: 5px;
+            }
+
+            button {
+                width: 100%;
+            }
+        }
+
+    </style>
 </head>
 
 <body>
 
+<!-- HEADER SECTION  -->
 <header>
-<h1>VINITA PRASAD</h1>
-<p>A BCA student passionate about learning web development.</p>
+    <!-- Main heading -->
+    <h1>VINITA PRASAD</h1>
+
+    <!-- Short introduction -->
+    <p>A BCA student passionate about learning web development.</p>
 </header>
 
+<!--  NAVIGATION BAR -->
 <nav>
-<a href="#home">HOME</a>
-<a href="#about">About</a>
-<a href="#projects">Projects</a>
-<a href="#contact">Contact</a>
+    <!-- Navigation links to different sections -->
+    <a href="#home">HOME</a>
+    <a href="#about">About</a>
+    <a href="#projects">Projects</a>
+    <a href="#contact">Contact</a>
 </nav>
 
+<!-- HOME SECTION -->
 <section id="home">
-<p>I love exploring things, being a coder student I am understanding the deepness of coding.</p>
+    <!-- Introduction paragraph -->
+    <p>I love exploring things, being a coder student I am understanding the deepness of coding.</p>
 
-<h3>My Hobby:</h3>
+    <!-- Hobby heading -->
+    <h3>My Hobby:</h3>
 
-<ol id="hobbyList">
-<li>Dancing</li>
-<li>Engaging with childrens</li>
-</ol>
+    <!-- Ordered list of hobbies -->
+    <ol id="hobbyList">
+        <li>Dancing</li>
+        <li>Engaging with children</li>
+    </ol>
 
-<input type="text" id="hobbyInput" placeholder="Add hobby benefit">
-<button onclick="addHobby()">Add</button>
+    <!-- Input field to add new hobby -->
+    <input type="text" id="hobbyInput" placeholder="Add hobby benefit">
 
+    <!-- Button to trigger addHobby function -->
+    <button onclick="addHobby()">Add</button>
 </section>
 
-<section id="about">
-<p>I am a BCA student in a learning environment and enthusiastically waiting for new things to happen.</p>
-</section>
+<!-- =======ABOUT SECTION =========-->
+<section id="home">
+    <!-- Intro about hobbies -->
+    <p>
+        My hobbies are not just activities, they reflect my personality and help me grow as an individual. 
+        They keep me creative, active, and connected with people around me.
+    </p>
 
-<section id="projects">
-<h2>Projects</h2>
-<p>Calculator using Java</p>
-<p>College Poster Design</p>
-<p>Personal Blogging</p>
-</section>
+    <h3>My Hobby:</h3>
 
+    <!-- Hobby list with definitions -->
+    <ol id="hobbyList">
+        <li>
+            Dancing 
+            <p>Dancing allows me to express my emotions freely and keeps me energetic and confident.</p>
+        </li>
+
+        <li>
+            Engaging with children 
+            <p>I enjoy spending time with children as it brings positivity, happiness, and helps me stay kind and patient.</p>
+        </li>
+    </ol>
+
+    <!-- Input to add new hobby -->
+    <input type="text" id="hobbyInput" placeholder="Add hobby benefit">
+    <button onclick="addHobby()">Add</button>
+</section>
+<!-- ======= CONTACT SECTION ======= -->
 <section id="contact">
-<h2>Contact Me</h2>
+    <h2>Contact Me</h2>
 
-<form onsubmit="return submitForm()">
-<input placeholder="Name"><br>
-<input placeholder="Email"><br>
-<textarea placeholder="Message"></textarea><br>
-<button type="submit">Submit</button>
-</form>
+    <!-- Form with submit event -->
+    <form onsubmit="return submitForm()">
 
+        <!-- Input fields -->
+        <input placeholder="Name"><br>
+        <input placeholder="Email"><br>
+
+        <!-- Message box -->
+        <textarea placeholder="Message"></textarea><br>
+
+        <!-- Submit button -->
+        <button type="submit">Submit</button>
+    </form>
 </section>
 
+<!-- ====== FOOTER SECTION ====== -->
 <footer>
-<p>Connect with me on</p>
 
-<a href="https://linkedin.com">LinkedIn</a>
-<p>and</p>
-<a href="https://github.com/vinitaprasad-bit/assignment-html-css">GitHub</a>
+    <!-- Social links -->
+    <p>Connect with me on</p>
 
-<p id="dateTime"></p>
+    <a href="https://linkedin.com" target="_blank">LinkedIn</a>
+
+    <p>and</p>
+
+    <a href="https://github.com/vinitaprasad-bit/assignment-html-css" target="_blank">GitHub</a>
+
+    <!-- Dynamic date & time -->
+    <p id="dateTime"></p>
 
 </footer>
 
+<!-- ========= JAVASCRIPT SECTION ====== -->
 <script>
 
-// Function to add delete button to every list item
-function addDeleteButton(li){
+    // Function: Adds a delete button to each list item
+    function addDeleteButton(li) {
 
-let deleteBtn = document.createElement("button");
-deleteBtn.textContent = " Delete";
+        // Create a new button element
+        let deleteBtn = document.createElement("button");
 
-deleteBtn.onclick = function(){
-li.remove();
-};
+        // Set button text
+        deleteBtn.textContent = " Delete";
 
-li.appendChild(deleteBtn);
+        // Define what happens when button is clicked
+        deleteBtn.onclick = function () {
+            li.remove(); // Remove the list item
+        };
 
-}
-
-
-// Add Hobby Item
-function addHobby(){
-
-let input = document.getElementById("hobbyInput");
-let text = input.value;
-
-if(text === "") return;
-
-let li = document.createElement("li");
-li.textContent = text;
-
-addDeleteButton(li);
-
-document.getElementById("hobbyList").appendChild(li);
-
-input.value = "";
-
-}
+        // Attach button to list item
+        li.appendChild(deleteBtn);
+    }
 
 
-// Add delete buttons to existing list items
-window.onload = function(){
+    // Function: Adds new hobby to list
+    function addHobby() {
 
-let items = document.querySelectorAll("#hobbyList li");
+        // Get input field value
+        let input = document.getElementById("hobbyInput");
+        let text = input.value;
 
-items.forEach(function(li){
-addDeleteButton(li);
-});
+        // If input is empty, do nothing
+        if (text === "") return;
 
-showDateTime();
+        // Create new list item
+        let li = document.createElement("li");
 
-}
+        // Set text inside list item
+        li.textContent = text;
+
+        // Add delete button to this item
+        addDeleteButton(li);
+
+        // Append to list
+        document.getElementById("hobbyList").appendChild(li);
+
+        // Clear input field
+        input.value = "";
+    }
 
 
-// Contact Form Alert
-function submitForm(){
-alert("Form submitted successfully!");
-return true;
-}
+    // Runs when page loads
+    window.onload = function () {
+
+        // Select all existing list items
+        let items = document.querySelectorAll("#hobbyList li");
+
+        // Add delete button to each existing item
+        items.forEach(function (li) {
+            addDeleteButton(li);
+        });
+
+        // Show current date and time
+        showDateTime();
+    }
 
 
-// Dynamic Date and Time
-function showDateTime(){
+    // Function: Handles form submission
+    function submitForm() {
 
-let now = new Date();
+        // Show alert message
+        alert("Form submitted successfully!");
 
-document.getElementById("dateTime").innerHTML =
-now.toLocaleString();
+        return true; // Allow form submission
+    }
 
-}
 
-setInterval(showDateTime,1000);
+    // Function: Displays current date & time
+    function showDateTime() {
+
+        // Get current date
+        let now = new Date();
+
+        // Display in readable format
+        document.getElementById("dateTime").innerHTML =
+            now.toLocaleString();
+    }
+
+    // Update time every second
+    setInterval(showDateTime, 1000);
 
 </script>
 
